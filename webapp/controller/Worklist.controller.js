@@ -186,22 +186,11 @@ sap.ui.define([
             oModel.setData(aData);
         },
         
-        _showObject : function (oItem) {
-            this.getRouter().navTo("object", {
-                objectId: oItem.getBindingContext().getPath().substring("/Products".length)
-            });
-        },
 
-        
-        _applySearch: function(aTableSearchState) {
-            var oTable = this.byId("table"),
-                oViewModel = this.getModel("worklistView");
-            oTable.getBinding("items").filter(aTableSearchState, "Application");
-            // changes the noDataText of the list in case there are no filter results
-            if (aTableSearchState.length !== 0) {
-                oViewModel.setProperty("/tableNoDataText", this.getResourceBundle().getText("worklistNoDataWithSearchText"));
-            }
+        handleSubmitMitiSubmit: function () {
+            sap.m.MessageBox.success("Your KRI Input has been submitted successfully");
         }
+        
 
     });
 });

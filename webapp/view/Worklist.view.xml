@@ -64,7 +64,7 @@
         <footer>
             <OverflowToolbar>
                 <ToolbarSpacer/>
-                <Button text="Submit" type="Accept" press="handleSubmitMitiSubmit" />
+                <Button text="Submit" type="Accept" press="handleSubmitKRIInput" />
             </OverflowToolbar>
         </footer>
     </Page>
